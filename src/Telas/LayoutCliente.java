@@ -33,7 +33,7 @@ import javax.swing.table.TableModel;
 import java.io.FileReader;
 import javax.swing.JFileChooser;
 
-public class Main extends JFrame{
+public class LayoutCliente extends JFrame{
     JFrame framePrincipal;
     private int indiceDaLista = 0;
     FileWriter arq;
@@ -76,10 +76,10 @@ public class Main extends JFrame{
     static MyTableModel tableData = new MyTableModel();
     JTable table = new JTable((TableModel) tableData);
     
-    public Main(){
+    public LayoutCliente(){
         drawGui();
     }
-    public Main(JFrame frame){
+    public LayoutCliente(JFrame frame){
         this.framePrincipal = frame;
         addWindowListener(new WindowAdapter(){
             @Override
@@ -93,7 +93,7 @@ public class Main extends JFrame{
 //    public static void main(String[] args){
 //         javax.swing.SwingUtilities.invokeLater(new Runnable() {
 //            public void run() {
-//                new Main().setVisible(true);
+//                new LayoutCliente().setVisible(true);
 //            }
 //        });
 //    }
@@ -108,7 +108,7 @@ public class Main extends JFrame{
                     indiceDaLista = linha;;//armazena nosso clique
                 }
                 
-                TelaMostrarRefeicao layoutDeProdutos = new TelaMostrarRefeicao(Main.this, (Refeicao) model.get(linha));//abre o layout da pizza
+                LayoutMostrarRefeicao layoutDeProdutos = new LayoutMostrarRefeicao(LayoutCliente.this, (Refeicao) model.get(linha));//abre o layout da pizza
                 layoutDeProdutos.setVisible(true);
                 setVisible(false);
             }

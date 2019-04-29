@@ -6,6 +6,7 @@ import java.util.List;
 public class Refeicao {
     private String nome;
     private String tamanho;
+    private String categoria;
     private double preco;
     private boolean status;
     private boolean choiceStatus;

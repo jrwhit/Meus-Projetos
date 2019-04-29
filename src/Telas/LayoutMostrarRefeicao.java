@@ -17,13 +17,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-public class TelaMostrarRefeicao extends JFrame{
+public class LayoutMostrarRefeicao extends JFrame{
     private JPanel panel;
     private JFrame framePrincipal;
     private Choice tamanho;
     Refeicao refe;
     
-    public TelaMostrarRefeicao(JFrame f, Refeicao refe) {
+    public LayoutMostrarRefeicao(JFrame f, Refeicao refe) {
         this.refe = refe;
         this.framePrincipal = f;
         addWindowListener(new WindowAdapter(){
@@ -164,7 +164,7 @@ public class TelaMostrarRefeicao extends JFrame{
                     if(tamanho.isEnabled()){
                         refe.setTamanho(tamanho.getSelectedItem());
                     }                    
-                    Main.tableData.setRow(refe);
+                    LayoutCliente.tableData.setRow(refe);
                     dispose();
                     framePrincipal.setVisible(true);
 		}

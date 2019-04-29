@@ -14,14 +14,14 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 
-public class TelaCadastroFunc extends JFrame{
+public class LayoutCadastroFuncionario extends JFrame{
     private JFrame framePrincipal;//tela principal
     JTextField txtNome, txtLogin, txtSenha;
     JLabel lblNome, lblLogin, lblSenha, lblTitulo;
     JButton btnAdd, btnReturn;
     Random rand;
     
-    public TelaCadastroFunc(JFrame frame){
+    public LayoutCadastroFuncionario(JFrame frame){
         this.framePrincipal = frame;
         addWindowListener(new WindowAdapter(){
             @Override

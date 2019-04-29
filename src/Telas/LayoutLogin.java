@@ -10,15 +10,15 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-public class TelaLogin extends JFrame{
+public class LayoutLogin extends JFrame{
     javax.swing.JTextField txtLogin, txtSenha;
     javax.swing.JLabel lblLogin, lblSenha, lblIcon;
     javax.swing.JButton btnConfirmar,btnAdd;
     ConexaoDataBase objCon;
     public static void main(String[] args){
-        TelaLogin login = new TelaLogin();
+        LayoutLogin login = new LayoutLogin();
     }
-    public TelaLogin(){
+    public LayoutLogin(){
         drawWindow();
         setLocationRelativeTo(null);
         setVisible(true);
@@ -118,7 +118,7 @@ public class TelaLogin extends JFrame{
                         && senhaDig.equals(senhaBanco))
                     {
                         JOptionPane.showMessageDialog(null, "Usuario correto");
-                        Main tela = new Main(TelaLogin.this);
+                        LayoutCliente tela = new LayoutCliente(LayoutLogin.this);
                         tela.setVisible(true);
                         setVisible(false);
                     }else{
@@ -135,7 +135,7 @@ public class TelaLogin extends JFrame{
         btnAdd.addMouseListener(new MouseAdapter() {//add de evento do clique
             @Override
             public void mouseClicked(MouseEvent evt) {
-                TelaCadastroFunc func = new TelaCadastroFunc(TelaLogin.this);
+                LayoutCadastroFuncionario func = new LayoutCadastroFuncionario(LayoutLogin.this);
                 func.setVisible(true);
                 setVisible(false);
             }
